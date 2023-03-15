@@ -10,7 +10,7 @@ from sklearn import metrics
 # Part 1: Build project
 data = pd.read_csv("train.csv")
 
-# Data pre-processing
+# Data preprocessing
 data["Sex"] = data["Sex"].map(lambda x: 0 if x == 'male' else 1)
 data = data[['Sex', 'Age', 'Pclass', 'SibSp', 'Parch', 'Fare', 'Survived']]
 data = data.dropna()
